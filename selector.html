@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="mySection"></section>
+
+    <script>
+        // Select the section element
+        let section = document.querySelector("section");
+
+        // Create an h1 element
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "Good Morning";
+
+        // Set an id attribute
+        h1.setAttribute("id", "Heading");
+
+        // Get and log the id attribute
+        console.log(h1.getAttribute("id"));
+
+        // Remove the id attribute
+        h1.removeAttribute("id");
+
+        // Append the h1 element to the section
+        section.appendChild(h1);
+
+        //h1.style.setProperty('color','yellow')
+        //h1.style.backgroundColor='blue'
+
+        h1.style.cssText="padding: 10px;border: 2px solid black;text-transform: lowercase;font-style:italic;text-align:center;font-size:45px;color:red;background-color:pink;"
+        //console.log(h1.style.getPropertyValue('font-size'))
+        //h1.style.removeProperty('font-size')
+    </script>
+
+</body>
+</html>
