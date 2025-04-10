@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        console.log("Named Function")
+        function sum(a,b){
+            return a+b;
+        }
+        console.log(sum(10,20))
+
+        
+        console.log("Anonymous Function")
+        let mark=function(a,b){
+            return a+b;
+        }
+        console.log(mark(10,20))
+
+        
+        console.log("First class function")
+        let first=function add(a,b){
+            console.log(a+b);
+        }
+        first(10,20)
+
+
+        console.log("Functional Expression")
+        const addno=function(a,b){
+            return a+b;
+        };
+        console.log(addno(10,20))
+
+
+        console.log("Immediate Invoke Functional Expression");
+        (function(a, b) {
+            console.log(a + b);
+        })(10, 20);
+
+        //by using arrow function
+        (a=>console.log(a**2))(10);
+        
+
+
+        //1.
+        let arrow=()=>{
+            console.log(" i am arrow function");
+        }
+
+        //2.
+        let ar=()=> console.log(" i am arrow function");
+    
+        //3.
+        console.log("Arrow functoin") 
+        var s=(a)=>{
+            return a**2;
+        };
+        console.log(s(10))
+       
+        console.log("Call back function")
+        function cal(a,b,operation){
+            return operation(a,b)
+        }
+        function sum(a,b){
+            return  a+b;
+        }
+        function sub(a,b){
+            return  a+b;
+        }
+        function mul(a,b){
+            return  a+b;
+        }
+        console.log("addition",cal(10,20,sum))
+        console.log("subtraction",cal(10,20,sub))
+        console.log("multiplication",cal(10,20,mul))
+
+
+        console.log("nested function")
+        function bank(){
+            let bal =1000;
+            
+            return function deposit(amount){
+                bal+=amount
+                console.log(bal);
+            }
+
+        }
+        console.log(bank()());
+
+        //generator function
+        function* count(){
+            yield 4;
+        }
+        let id=count();
+        console.log(id.next().value);
+        console.log(id.next().value);
+        console.log(id.next().value);
+        console.log(id.next().value);
+    
+    </script>
+</body>
+</html>
