@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events Example</title>
+    <style>
+        body {
+            height: 200vh; /* Make the page scrollable */
+            transition: background-color 0.5s ease;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Scroll, Load, and Resize Events in JavaScript</h1>
+    <p>Scroll the page, resize the window, or reload to see the background color change.</p>
+
+    <script>
+        // Load event - Set initial background color
+        window.addEventListener("load", () => {
+            document.body.style.backgroundColor = "lightblue";
+            console.log("Page loaded! Background color set.");
+        });
+        
+        // Scroll event - Change background color when scrolling
+        window.addEventListener("scroll", () => {
+            document.body.style.backgroundColor = "lightcoral";
+            console.log("Scrolled! Background changed.");
+        });
+
+        // Resize event - Change background color on window resize
+        window.addEventListener("resize", () => {
+            document.body.style.backgroundColor = "lightgreen";
+            console.log("Window resized! Background changed.");
+        });
+    </script>
+
+</body>
+</html>

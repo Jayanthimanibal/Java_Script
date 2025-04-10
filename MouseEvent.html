@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let output = document.getElementById("output");
+        let box = document.getElementById("box");
+    
+        // Mouse Events
+        box.addEventListener("click", function () {
+            output.innerHTML = "Mouse Clicked!";
+        });
+    
+        box.addEventListener("dblclick", function () {
+            output.innerHTML = "Mouse Double Clicked!";
+        });
+    
+        box.addEventListener("mouseenter", function () {
+            output.innerHTML = "Mouse Entered!";
+        });
+    
+        box.addEventListener("mouseleave", function () {
+            output.innerHTML = "Mouse Left!";
+        });
+    
+        box.addEventListener("mousemove", function (event) {
+            output.innerHTML = `Mouse Moving: X=${event.clientX}, Y=${event.clientY}`;
+        });
+    });
+    </script>
+    
+   
+        <h2>Interact with the box</h2>
+        <p id="output">Use the mouse on the box.</p>
+        <div id="box" style="width: 200px; height: 200px; background-color: lightblue; margin-top: 20px; text-align: center; line-height: 200px;">Hover or Click Me</div>
+    </body>
+    
+
+</html>

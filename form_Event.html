@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Form Events</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Type your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Select form and input elements
+        const form = document.getElementById("myForm");
+        const nameInput = document.getElementById("name");
+
+        // Add event listener for input field
+        nameInput.addEventListener("input", function(event) {
+            console.log("Input changed: " + event.target.value);
+        });
+
+        // Add event listener for form submission
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents form from actually submitting
+            alert("Form submitted!");
+        });
+    </script>
+
+</body>
+</html>

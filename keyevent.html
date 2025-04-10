@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let output = document.getElementById("output");
+    let input = document.querySelector("input");
+
+    document.addEventListener("keydown", function (event) {
+        output.innerHTML = `Key Down: ${event.key}`;
+    });
+
+    document.addEventListener("keypress", function (event) {
+        output.innerHTML = `Key Press: ${event.key}`;
+    });
+
+    document.addEventListener("keyup", function (event) {
+        output.innerHTML = `Key Up: ${event.key}`;
+    });
+
+    input.addEventListener("keypress", (e) => {
+        console.log(`Key: ${e.key}, Code: ${e.keyCode}`);
+    });
+});
+</script>
+
+<body>
+    <h2>Press any key</h2>
+    <input type="text" placeholder="Type here...">
+    <p id="output">Press a key to see the event.</p>
+</body>
+
+    
+    
+    
+    </script>
+
+</html>
+
