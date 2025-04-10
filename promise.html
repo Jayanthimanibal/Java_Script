@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("good morning")
+        let mypromise=new Promise((res,rej)=>{
+            let lunch=false
+            if(lunch){
+                res('fullied')
+            }
+            else{
+                rej('rejected')
+            }
+        })
+        mypromise.then(respone=>console.log(respone))
+        mypromise.catch(error=>console.log(error))
+        console.log("today is promise class")
+    </script>
+</body>
+</html>
+
+/*fake <app</applet>
+1.function
+2.get the data from api to fetch record
+3.status to 200 succesfully fetched
