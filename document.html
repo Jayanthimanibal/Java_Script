@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1 id="h1">i am h1 tag</h1>
+        <section1 class="'tag">i am section1 tag</section>
+        <section2 class ="tag">i am section2 tag</section>
+    <script>
+        let h1=document.getElementById('h1')
+            console.log(h1);
+            
+        let section1=document.getElementsByClassName('tag')
+        console.log(section1);
+        //section.map(value=>console.log(value))
+        // map(value=>console.log(value))
+
+        let hh1=document.querySelector('.tag')
+        console.log(hh1)
+
+        let section2=document.getElementsByTagName('section')
+        console.log(section2)
+
+        let qclass=document.querySelector('.tag')
+        console.log(qclass)
+
+        let  qid=document.querySelector('section')
+        console.log(qid)
+
+        let all=document.querySelectorAll('.tag')
+        console.log(all)
+
+        let arr=[...section]
+        arr.map(value=>console.log(value))
+    </script>
+</body>
+</html>
