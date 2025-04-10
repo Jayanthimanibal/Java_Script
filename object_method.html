@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object_method</title>
+</head>
+<body>
+    <script>
+        // Object.freeze()
+        // It prevents modification of an object. You cannot add, remove, or change properties.
+        // The object becomes immutable.
+        const obj = { name: "John", age: 25 };
+        Object.freeze(obj);
+        obj.age = 30;  // ❌ This won't work (no error in non-strict mode)
+        delete obj.name; // ❌ This won't work
+        obj.city = "New York"; // ❌ This won't work
+        console.log(obj); // { name: "John", age: 25 }
+
+        
+        // Object.isFrozen()
+        // Checks if an object is frozen.
+        console.log(Object.isFrozen(obj)); // true
+
+        const obj2={name:'jenu',age:21};
+        console.log(Object.isFrozen(obj2))
+
+        console.log(Math.max(10,20,30));
+        console.log(Math.min(10,20,30));
+        console.log(Math.sqrt(20));
+        console.log(Math.ceil(10,9))
+        console.log(Math.floor(10,9)) 
+        console.log(Math.round(10,9))
+        console.log(Math.trunc(10,9))
+
+        console.log(Math.trunc((Math.random(10,8))));
+
+
+        //formula: Math.random()*((max-min))+min
+        //Math.random()*51... to use 51 
+        console.log(Math.floor(Math.random() * (9999-999)) + 999);
+        
+        
+      // Correct way to create a date object
+let date = new Date(2003, 7, 15); // Month index starts from 0 (July = 6)
+
+console.log("Date:", date);
+console.log("Day of Month:", date.getDate()); 
+console.log("Day of Week (0=Sunday, 6=Saturday):", date.getDay()); 
+console.log("Full Year:", date.getFullYear());
+console.log("Hours:", date.getHours());
+console.log("Month (0=Jan, 11=Dec):", date.getMonth()); 
+console.log("Seconds:", date.getSeconds());
+console.log(Date.now())
+
+
+// Create a new Date object (current date)
+let date = new Date();
+
+// Set specific date values
+date.setDate(15);
+date.setMonth(6); // 6 = July (Months start from 0)
+date.setFullYear(2003);
+
+console.log("Day of the Week (0=Sunday, 6=Saturday):", date.getDay());
+console.log("Seconds:", date.getSeconds());
+console.log("Hours:", date.getHours());
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
