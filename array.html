@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Functions</title>
+</head>
+<body>
+    <script>
+        //literal way
+        let arr=[1,2,3,4,5]
+        console.log(arr)
+        console.log(typeof(arr))
+        console.log(arr[1])
+
+        //!construction way
+        let arr2=new Array(1,2,'hello',"hai")
+        console.log("constructor",arr2)
+
+        //! at index: It is used to fetch the values
+        console.log("index",arr.at(1))
+
+        //push(value): 
+        console.log(arr.push('hello',8))
+        console.log("push",arr)
+
+        //pop
+        arr.pop()
+        console.log("pop",arr)
+
+        //shift
+        arr.shift()
+        console.log("shift",arr)
+
+        //concatenate
+        let arr3=[2,7,4,5]
+        let arr4=[1,2,3,4]
+        console.log(arr3.concat(arr4))
+
+        //sort():it is used to sort an array
+        arr3.sort()
+        console.log("concate",arr3.concat(arr4))
+        console.log(arr3.sort())
+
+        let name=["jaya","sweathi","hema"]
+        console.log("sort",name.sort())
+
+        //reverse
+        console.log("reverse",arr3.reverse())
+
+        //slice: delte the value and replace value
+        console.log("slice",name.slice(0,1,"swathi"))
+        console.log("slice",arr3.slice(1,4))
+
+        //flat
+        let ar=[1,2,3,4,[5,6,7]];
+        console.log("flat",ar[4][1])
+
+     
+
+        let b = [1, [2, [3, [4, 5]]]];
+
+console.log(b.flat(1)); // [1, 2, [3, [4, 5]]]
+console.log(b.flat(2)); // [1, 2, 3, [4, 5]]
+console.log(b.flat(3)); // [1, 2, 3, 4, 5]
+console.log(b.flat(Infinity)); // Completely flattens -> [1, 2, 3, 4, 5]
+
+
+       
+
+
+
+    </script>
+
+</body>
+</html>       
+      
